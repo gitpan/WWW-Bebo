@@ -1,0 +1,15 @@
+Revision history for WWW-Bebo
+
+0.02	2007-10-08
+		- Fixed post_blog method to work with site changes.
+		- Fixed docs in post_blog sample script: removed "body" argument.
+
+0.01    2006-09-30 - 2007-07-31
+        - First version, able to log into your Bebo account,
+          thanks to "WWW::Sitebase".
+        - Added post_blog and post_band_blog methods.
+        - Added post_blog sample script.
+        - Added bebo_login sample script to MANIFEST
+        - Requires WWW::Sitebase::Navigator 0.3.
+        - Fixed login form.
+        - Minor doc fixes.

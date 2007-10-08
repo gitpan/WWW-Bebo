@@ -1,0 +1,12 @@
+Build.PL
+Changes
+MANIFEST
+META.yml # Will be created by "make dist"
+README
+lib/WWW/Bebo.pm
+t/00-load.t
+t/boilerplate.t
+t/pod-coverage.t
+t/pod.t
+sample_scripts/bebo_login
+sample_scripts/post_blog

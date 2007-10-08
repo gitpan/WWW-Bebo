@@ -1,0 +1,8 @@
+#!/usr/bin/perl -I../lib
+
+use WWW::Bebo;
+
+my $bebo = new WWW::Bebo( auto_login => 1 );
+
+warn $bebo->error if $bebo->error;
+print $bebo->current_page->content;

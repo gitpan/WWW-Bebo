@@ -1,0 +1,34 @@
+#!/usr/bin/perl -I../lib
+
+use WWW::Bebo;
+
+my $bebo = new WWW::Bebo( auto_login => 1 );
+
+print $bebo->error, "\n",
+	  $bebo->current_page->content, "\n"
+	if $bebo->error;
+
+die $bebo->error if $bebo->error;
+
+$bebo->post_blog( @ARGV );
+
+print $bebo->error, "\n",
+	  $bebo->current_page->content, "\n"
+	if $bebo->error;
+
+die $bebo->error if $bebo->error;
+
+
+=head2 post_blog( %options )
+
+ post_blog(
+ 	band_id => $band_id,  # ID of the band. Go to the band page and
+ 						  # Look in the URL GrpID=123456. Logged in user
+ 						  # must have access.
+ 						  # If not included, posts to the logged-in user's
+ 						  # home page.
+	subject => $subject,  # Subject of the blog
+	message => $body,     # Message section of the blog.
+ );
+
+=cut
